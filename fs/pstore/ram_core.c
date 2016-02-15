@@ -277,7 +277,7 @@ static void notrace persistent_ram_update(struct persistent_ram_zone *prz,
 {
 	struct persistent_ram_buffer *buffer = prz->buffer;
 #if (defined CONFIG_MACH_XIAOMI_MIDO) || (defined CONFIG_MACH_XIAOMI_TISSOT)
-	memcpy_pstore(buffer->data + start, s, count);
+	memcpy_toio(buffer->data + start, s, count);
 #else
 	memcpy(buffer->data + start, s, count);
 #endif
