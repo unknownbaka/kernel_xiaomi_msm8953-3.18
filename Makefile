@@ -915,7 +915,6 @@ endif
 # use the deterministic mode of AR if available
 KBUILD_ARFLAGS := $(call ar-option,D)
 
-include $(srctree)/scripts/Makefile.kasan
 include $(srctree)/scripts/Makefile.extrawarn
 include $(srctree)/scripts/Makefile.ubsan
 
