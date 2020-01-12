@@ -113,13 +113,6 @@ SCHED_FEAT(ENERGY_AWARE, false)
 SCHED_FEAT(MIN_CAPACITY_CAPPING, false)
 
 /*
- * Enforce the priority of candidates selected by find_best_target()
- * ON: If the target CPU saves any energy, use that.
- * OFF: Use whichever of target or backup saves most.
- */
-SCHED_FEAT(FBT_STRICT_ORDER, false)
-
-/*
  * Apply schedtune boost hold to tasks of all sched classes.
  * If enabled, schedtune will hold the boost applied to a CPU
  * for 50ms regardless of task activation - if the task is
