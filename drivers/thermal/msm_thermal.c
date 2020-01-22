@@ -5314,9 +5314,9 @@ static ssize_t show_thermal_stats(struct kobject *kobj,
 	for (i = 0; i < MAX_HISTORY_SZ; i++) {
 		tmp = msm_thermal_stats.temp_history[i];
 		if (tmp >= overtemp)
- 			msm_thermal_stats.overtemp++;
- 		else if (tmp < overtemp &&
- 			 tmp >=	warning)
+			msm_thermal_stats.overtemp++;
+		else if (tmp < overtemp &&
+			 tmp >=	warning)
 			msm_thermal_stats.warning++;
 		else
 			msm_thermal_stats.normal++;
