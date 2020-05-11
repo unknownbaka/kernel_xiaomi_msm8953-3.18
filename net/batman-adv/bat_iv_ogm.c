@@ -314,12 +314,6 @@ static int batadv_iv_ogm_iface_enable(struct batadv_hard_iface *hard_iface)
 
 	mutex_lock(&hard_iface->bat_iv.ogm_buff_mutex);
 
-	mutex_lock(&hard_iface->bat_iv.ogm_buff_mutex);
-
-	mutex_lock(&hard_iface->bat_iv.ogm_buff_mutex);
-
-	mutex_lock(&hard_iface->bat_iv.ogm_buff_mutex);
-
 	/* randomize initial seqno to avoid collision */
 	get_random_bytes(&random_seqno, sizeof(random_seqno));
 	atomic_set(&hard_iface->bat_iv.ogm_seqno, random_seqno);
@@ -328,7 +322,7 @@ static int batadv_iv_ogm_iface_enable(struct batadv_hard_iface *hard_iface)
 	ogm_buff = kmalloc(hard_iface->bat_iv.ogm_buff_len, GFP_ATOMIC);
 	if (!ogm_buff) {
 		mutex_unlock(&hard_iface->bat_iv.ogm_buff_mutex);
-		goto out;
+		return -ENOMEM;
 	}
 
 	hard_iface->bat_iv.ogm_buff = ogm_buff;
@@ -343,10 +337,7 @@ static int batadv_iv_ogm_iface_enable(struct batadv_hard_iface *hard_iface)
 
 	mutex_unlock(&hard_iface->bat_iv.ogm_buff_mutex);
 
-out:
-	mutex_unlock(&hard_iface->bat_iv.ogm_buff_mutex);
-
-	return res;
+	return 0;
 }
 
 static void batadv_iv_ogm_iface_disable(struct batadv_hard_iface *hard_iface)
