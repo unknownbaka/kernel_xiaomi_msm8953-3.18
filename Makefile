@@ -667,7 +667,6 @@ KBUILD_CFLAGS	+= $(call cc-option, -mllvm -polly) \
 endif
 else
 KBUILD_CFLAGS	+= -O3
-KBUILD_CFLAGS += --param=max-inline-insns-auto=1000
 endif
 endif
 
