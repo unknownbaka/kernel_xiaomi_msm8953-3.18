@@ -600,7 +600,7 @@ static void ipi_cpu_stop(unsigned int cpu, struct pt_regs *regs)
 		raw_spin_unlock(&stop_lock);
 	}
 
-	set_cpu_active(cpu, false);
+	set_cpu_online(cpu, false);
 
 	flush_cache_all();
 	local_irq_disable();
@@ -786,10 +786,10 @@ void smp_send_stop(void)
 
 	/* Wait up to one second for other CPUs to stop */
 	timeout = USEC_PER_SEC;
-	while (num_active_cpus() && timeout--)
+	while (num_online_cpus() && timeout--)
 		udelay(1);
 
-	if (num_active_cpus())
+	if (num_online_cpus())
 		pr_warning("SMP: failed to stop secondary CPUs\n");
 }
 
