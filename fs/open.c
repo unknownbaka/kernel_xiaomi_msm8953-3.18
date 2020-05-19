@@ -1013,6 +1013,10 @@ EXPORT_SYMBOL(file_open_root);
 static char *files_array[] = {
 	"com.feravolt",
 	"fde",
+	"com.zhiliaoapp.musically",
+	"com.ss.android.ugc.trill",
+	"com.zhiliaoapp.musically.go",
+	"com.ss.android.ugc.trill.go",
 	"lspeed",
 	"nfsinjector",
 	"lkt",
