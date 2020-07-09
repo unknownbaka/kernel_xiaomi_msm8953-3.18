@@ -2681,6 +2681,7 @@ static int ufshcd_queuecommand(struct Scsi_Host *host, struct scsi_cmnd *cmd)
 	ufshcd_compose_upiu(hba, lrbp);
 	err = ufshcd_map_sg(lrbp);
 	if (err) {
+		ufshcd_release(hba);
 		lrbp->cmd = NULL;
 		clear_bit_unlock(tag, &hba->lrb_in_use);
 		ufshcd_release_all(hba);
@@ -7198,7 +7199,6 @@ out:
 	return err;
 }
 
-<<<<<<< HEAD
 /**
  * ufshcd_ioctl - ufs ioctl callback registered in scsi_host
  * @dev: scsi device required for per LUN queries
