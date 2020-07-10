@@ -2,14 +2,6 @@
 
 ![logo](https://telegra.ph/file/7907aaef71619d609160e.png)
 
-## Branches and informaton
-```
-ten-uc    : Current stable released with Underclock frequency
-ten-nonuc : Current stable released without Underclock frequency
-ten-inline: Current branch for inlined with rom (Without LTO)
-
-```
-
 ## About device
 ![mido](https://telegra.ph/file/25b0b8281d57ad3d175b9.jpg)
 
@@ -36,8 +28,6 @@ As of 17-04-2020: Latest Release
 - Schedutil, Blu_Schedutil & Electroutil Governors
 - Agilesd And Sociopath TCP Algorithm 
 - Optimized CPU Boost for EAS (Dynamic Stune Boost v3)
-- Optimized CPU Input Boost 
-- Optmized Devfreq Boost
 - Upstreamed CFQ I/O Schedulers
 - Other I/O Schedulers (Depressed)
 - 100Hz timer tick rate frequency
@@ -45,23 +35,13 @@ As of 17-04-2020: Latest Release
 - More Than Schedutil Governors
 - Cortex A53 Optimizations
 - UnderClock Frequency 
-- UnderVolt by 25mV
 - Backlight Dimmer
 - KLapse v5.0
 - USB FastCharging
-- Wakelock Blocker
 - Intellithermal V3
 - Sound Control V3
 - Adreno Boost
 - Adreno Idler
 - And Many More Shit There
 ```
-
-## Download build
-[![Download PureCAFx Kernel](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/purecafx-kernel/files/mido/)
-
-## Telegram Channel
-[![Telegram Support](https://telegra.ph/file/eb84cccb296f8cc72a32e.png)](https://t.me/AvariceCI)
-
-# Avarice Project X || 2019 - 2020
 
