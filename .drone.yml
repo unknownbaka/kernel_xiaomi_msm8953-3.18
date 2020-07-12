@@ -10,7 +10,7 @@ clone:
 
 steps:
 - name: Baka-CI-Build-Project
-  image: ubuntu:20.04
+  image: ubuntu:20.10
   environment:
     TELEGRAM_BOT:
         from_secret: TELEGRAM_BOT
