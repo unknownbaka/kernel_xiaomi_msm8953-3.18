@@ -9,7 +9,7 @@
 export KBUILD_BUILD_USER=unknownbaka
 export KBUILD_BUILD_HOST=Drone-CI
 export ARCH=arm64
-export TZ=Asia/Shanghai
+export TZ=CST-8
 
 # Kernel directory environment
 BUILD_CLANG=2
@@ -20,7 +20,7 @@ KERNEL="$(pwd)"
 KERNEL_TEMP="$(pwd)/TEMP"
 KERNEL_DEVICE="Redmi Note 4x"
 KERNEL_BOT=Baka-CI
-KERNEL_DATE="$(TZ=Asia/Shanghai date +%Y%m%d-%H%M)"
+KERNEL_DATE="$(date +%Y%m%d-%H%M)"
 KERNEL_ANDROID_VER="Q"
 
 # Kernel environment
@@ -115,7 +115,7 @@ bot_template   "<b>||------------------${KERNEL_BOT} Build Bot------------------
                 "<b>Kernel Local Version :</b><code> ${TELEGRAM_KERNEL_LOCALVER} </code>" \
                 "<b>Kernel Host :</b><code> ${TELEGRAM_COMPILER_NAME}@${TELEGRAM_COMPILER_HOST} </code>" \
                 "<b>Kernel Toolchain :</b><code> ${TELEGRAM_TOOLCHAIN_VER} </code>" \
-                "<b>UTS Version :</b><code> ${TELEGRAM_UTS_VER} </code>"
+                "<b>CST Version :</b><code> ${TELEGRAM_UTS_VER} </code>"
 }
 
 # Telegram bot message || success notification
