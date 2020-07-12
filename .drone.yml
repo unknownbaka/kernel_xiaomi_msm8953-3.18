@@ -1,0 +1,21 @@
+kind: pipeline
+name: Baka-CI-Build-Project
+
+platform:
+  os: linux
+  arch: amd64
+
+clone:
+  depth: 1
+
+steps:
+- name: Baka-CI-Build-Project
+  image: ubuntu:20.04
+  environment:
+    TELEGRAM_BOT:
+        from_secret: TELEGRAM_BOT
+  commands:
+    - echo 'Asia/Shanghai' > /etc/timezone
+    - apt-get update -qq && apt-get upgrade -y && apt-get install --no-install-recommends -y ca-certificates curl git tar unzip wget zip zstd
+    - chmod a+x build_kernel.sh
+    - bash build_kernel.sh
