@@ -43,7 +43,7 @@ CONFIG_BUILDTIME_EXTABLE_SORT=y
 CONFIG_INIT_ENV_ARG_LIMIT=32
 CONFIG_CROSS_COMPILE=""
 # CONFIG_COMPILE_TEST is not set
-CONFIG_LOCALVERSION="-Avarice-LA.UM.8.6.r1-04300-89xx.0"
+CONFIG_LOCALVERSION="-PureCAFx-LA.UM.8.6.r1-04700-89xx.0"
 # CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_DEFAULT_HOSTNAME="(none)"
 CONFIG_SWAP=y
@@ -386,10 +386,6 @@ CONFIG_PCI_LABEL=y
 # CONFIG_HOTPLUG_PCI is not set
 
 #
-# Kernel Features
-#
-
-#
 # ARM errata workarounds via the alternatives framework
 #
 # CONFIG_ARM64_ERRATUM_826319 is not set
@@ -542,13 +538,8 @@ CONFIG_CPU_PM=y
 CONFIG_SUSPEND_TIME=y
 # CONFIG_DEDUCE_WAKEUP_REASONS is not set
 # CONFIG_PM_SYNC_BEFORE_SUSPEND is not set
-CONFIG_BOEFFLA_WL_BLOCKER=y
 CONFIG_ARCH_SUSPEND_POSSIBLE=y
 CONFIG_ARM64_CPU_SUSPEND=y
-
-#
-# CPU Power Management
-#
 
 #
 # CPU Idle
@@ -1106,10 +1097,6 @@ CONFIG_IPC_ROUTER_NODE_ID=1
 CONFIG_HAVE_BPF_JIT=y
 
 #
-# Device Drivers
-#
-
-#
 # Generic Driver Options
 #
 CONFIG_UEVENT_HELPER=y
@@ -1268,14 +1255,6 @@ CONFIG_MSM_ULTRASOUND=y
 CONFIG_AINUR_DTS_HW=y
 
 #
-# Intel MIC Bus Driver
-#
-
-#
-# Intel MIC Host Driver
-#
-
-#
 # Intel MIC Card Driver
 #
 # CONFIG_GENWQE is not set
@@ -1409,10 +1388,6 @@ CONFIG_TUN=y
 CONFIG_VETH=y
 # CONFIG_NLMON is not set
 # CONFIG_ARCNET is not set
-
-#
-# CAIF transport drivers
-#
 
 #
 # Distributed Switch Architecture drivers
@@ -1946,10 +1921,6 @@ CONFIG_I2C_MUX=y
 CONFIG_I2C_HELPER_AUTO=y
 
 #
-# I2C Hardware Bus support
-#
-
-#
 # PC SMBus host controller drivers
 #
 # CONFIG_I2C_ALI1535 is not set
@@ -2040,10 +2011,6 @@ CONFIG_SPI_QUP=y
 # CONFIG_PPS is not set
 
 #
-# PPS generators support
-#
-
-#
 # PTP clock support
 #
 # CONFIG_PTP_1588_CLOCK is not set
@@ -2119,18 +2086,6 @@ CONFIG_GPIO_QPNP_PIN=y
 # CONFIG_GPIO_MCP23S08 is not set
 # CONFIG_GPIO_MC33880 is not set
 # CONFIG_GPIO_74X164 is not set
-
-#
-# AC97 GPIO expanders:
-#
-
-#
-# LPC GPIO expanders:
-#
-
-#
-# MODULbus GPIO expanders:
-#
 
 #
 # USB GPIO expanders:
@@ -2640,50 +2595,6 @@ CONFIG_MEDIA_ATTACH=y
 CONFIG_VIDEO_IR_I2C=y
 
 #
-# Audio decoders, processors and mixers
-#
-
-#
-# RDS decoders
-#
-
-#
-# Video decoders
-#
-
-#
-# Video and audio decoders
-#
-
-#
-# Video encoders
-#
-
-#
-# Camera sensor devices
-#
-
-#
-# Flash devices
-#
-
-#
-# Video improvement chips
-#
-
-#
-# Audio/Video compression chips
-#
-
-#
-# Miscellaneous helper chips
-#
-
-#
-# Sensors used on soc_camera driver
-#
-
-#
 # soc_camera sensor drivers
 #
 # CONFIG_SOC_CAMERA_IMX074 is not set
@@ -2824,7 +2735,6 @@ CONFIG_BACKLIGHT_LCD_SUPPORT=y
 # CONFIG_VGASTATE is not set
 # CONFIG_LT8912 is not set
 # CONFIG_LOGO is not set
-CONFIG_KLAPSE=y
 CONFIG_SOUND=y
 # CONFIG_SOUND_OSS_CORE is not set
 CONFIG_SND=y
@@ -2934,10 +2844,6 @@ CONFIG_SND_USB_AUDIO=y
 CONFIG_SND_SOC=y
 # CONFIG_SND_ATMEL_SOC is not set
 # CONFIG_SND_DESIGNWARE_I2S is not set
-
-#
-# SoC Audio for Freescale CPUs
-#
 
 #
 # Common SoC Audio options for Freescale CPUs:
@@ -3767,10 +3673,6 @@ CONFIG_ARM_SMMU=y
 # CONFIG_STE_MODEM_RPROC is not set
 
 #
-# Rpmsg drivers
-#
-
-#
 # SOC (System On Chip) specific Drivers
 #
 # CONFIG_MSM_HAB is not set
@@ -3947,14 +3849,6 @@ CONFIG_EFI_ARMSTUB=y
 # CONFIG_MSM_TZ_LOG is not set
 # CONFIG_BIF is not set
 CONFIG_AINUR_DTS_SW=y
-
-#
-# Firmware Drivers
-#
-
-#
-# EFI (Extensible Firmware Interface) Support
-#
 
 #
 # File systems
@@ -4151,10 +4045,6 @@ CONFIG_NLS_UTF8=y
 # CONFIG_BLOCK_UNWANTED_APPS is not set
 CONFIG_BLOCK_UNWANTED_FILES=y
 # CONFIG_VIRTUALIZATION is not set
-
-#
-# Kernel hacking
-#
 
 #
 # printk and dmesg options
