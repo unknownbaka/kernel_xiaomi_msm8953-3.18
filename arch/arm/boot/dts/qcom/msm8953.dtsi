@@ -22,10 +22,6 @@
 	qcom,msm-id = <293 0x0>;
 	interrupt-parent = <&intc>;
 
-	chosen {
-		bootargs = "sched_enable_power_aware=1";
-	};
-
 	firmware: firmware {
 		android {
 			compatible = "android,firmware";
@@ -967,9 +963,7 @@
 			< 1689600000 4>,
 			< 1804800000 5>,
 			< 1958400000 6>,
-			< 2016000000 7>,
-			< 2150400000 8>,
-			< 2208000000 9>;
+			< 2016000000 7>;
 		qcom,speed7-bin-v0-cci =
 			<          0 0>,
 			<  261120000 1>,
@@ -1020,14 +1014,12 @@
 			 < 1689600 >,
 			 < 1804800 >,
 			 < 1958400 >,
-			 < 2016000 >,
-			 < 2150400 >,
-			 < 2208000 >;
+			 < 2016000 >;
 	};
 
 	cpubw: qcom,cpubw {
 		compatible = "qcom,devbw";
-		governor = "bw_hwmon";
+		governor = "cpufreq";
 		qcom,src-dst-ports = <1 512>;
 		qcom,active-only;
 		qcom,bw-tbl =
@@ -1046,7 +1038,7 @@
 
 	mincpubw: qcom,mincpubw {
 		compatible = "qcom,devbw";
-		governor = "performance";
+		governor = "cpufreq";
 		qcom,src-dst-ports = <1 512>;
 		qcom,active-only;
 		qcom,bw-tbl =
@@ -1082,15 +1074,18 @@
 			 < 1689600  6445>,
 			 < 1804800  7104>,
 			 < 1958400  7104>,
-			 < 2208000  7104>;
+			 < 2016000  7104>;
 		};
 
 		mincpubw-cpufreq {
 			target-dev = <&mincpubw>;
 			cpu-to-dev-map =
-				<  652800 1611 >,
+				<  652800 769  >,
+				< 1036800 1611 >,
 				< 1401600 3221 >,
-				< 2208000 5859 >;
+				< 1689600 5859 >,
+				< 1804800 6445 >,
+				< 2016000 7104 >;
 		};
 	};
 
