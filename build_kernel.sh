@@ -12,8 +12,7 @@ export ARCH=arm64
 export TZ=CST-8
 
 # Kernel directory environment
-BUILD_CLANG=2
-BUILD_KERNEL=1
+BUILD_CLANG=1
 CODENAME="mido"
 IMAGE="$(pwd)/out/arch/arm64/boot/Image.gz-dtb"
 KERNEL="$(pwd)"
@@ -25,7 +24,7 @@ KERNEL_ANDROID_VER="Q"
 
 # Kernel environment
 KERNEL_NAME="PureCAFx"
-KERNEL_BRANCH="Baka"
+KERNEL_BRANCH="$(git branch --show-current)"
 KERNEL_SCHED="EAS"
 
 # Telegram Bot
