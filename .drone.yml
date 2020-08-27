@@ -14,6 +14,8 @@ steps:
   environment:
     TELEGRAM_BOT:
         from_secret: TELEGRAM_BOT
+    TELEGRAM_GROUP:
+        from_secret: TELEGRAM_GROUP
   commands:
     - echo 'Asia/Shanghai' > /etc/timezone
     - apt-get update -qq && apt-get upgrade -y && apt-get install --no-install-recommends -y ca-certificates curl git tar unzip wget zip zstd
