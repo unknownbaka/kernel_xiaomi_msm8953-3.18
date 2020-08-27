@@ -29,7 +29,7 @@ KERNEL_SCHED="EAS"
 
 # Telegram Bot
 TELEGRAM_BOT_ID=${TELEGRAM_BOT}
-TELEGRAM_GROUP_ID=223580291
+TELEGRAM_GROUP_ID=${TELEGRAM_GROUP}
 TELEGRAM_FILENAME="${KERNEL_NAME}-${CODENAME}-${KERNEL_DATE}.zip"
 
 # Telegram Bot Service || Compiling Notification
@@ -54,7 +54,7 @@ if [ "$BUILD_CLANG" = "1" ]; then
     export PATH=${CLANG_PATH}:${PATH}
     export LD_LIBRARY_PATH="$(pwd)/proton-clang/bin/../lib:$PATH"
 elif [ "$BUILD_CLANG" = "2" ]; then
-    svn checkout https://github.com/AOSiP/platform_prebuilts_clang_host_linux-x86/trunk/clang-r383902c google-clang
+    svn checkout https://github.com/AOSiP/platform_prebuilts_clang_host_linux-x86/trunk/clang-r399163 google-clang
     export CLANG_PATH=$(pwd)/google-clang/bin
     export PATH=${CLANG_PATH}:${PATH}
     export LD_LIBRARY_PATH="$(pwd)/google-clang/bin/../lib:$PATH"
