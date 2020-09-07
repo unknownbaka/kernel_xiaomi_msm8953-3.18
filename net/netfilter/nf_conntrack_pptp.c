@@ -69,7 +69,6 @@ void
 			     struct nf_conntrack_expect *exp) __read_mostly;
 EXPORT_SYMBOL_GPL(nf_nat_pptp_hook_expectfn);
 
-#if defined(DEBUG) || defined(CONFIG_DYNAMIC_DEBUG)
 /* PptpControlMessageType names */
 static const char *const pptp_msg_name_array[PPTP_MSG_MAX + 1] = {
 	[0]				= "UNKNOWN_MESSAGE",
@@ -98,7 +97,6 @@ const char *pptp_msg_name(u_int16_t msg)
 	return pptp_msg_name_array[msg];
 }
 EXPORT_SYMBOL(pptp_msg_name);
-#endif
 
 #define SECS *HZ
 #define MINS * 60 SECS
