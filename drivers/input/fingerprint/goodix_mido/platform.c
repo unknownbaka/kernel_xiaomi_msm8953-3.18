@@ -49,11 +49,6 @@ static int select_pin_ctl(struct gf_dev *gf_dev, const char *name)
 		const char *n = pctl_names[i];
 		if (!strncmp(n, name, strlen(n))) {
 			rc = pinctrl_select_state(gf_dev->fingerprint_pinctrl, gf_dev->pinctrl_state[i]);
-
-			if (rc)
-				dev_err(dev, "cannot select '%s'\n", name);
-			else
-				dev_err(dev, "Selected '%s'\n", name);
 			goto exit;
 		}
 	}
@@ -169,7 +164,6 @@ static int hw_reset(struct  gf_dev *gf_dev)
 		goto exit;
 
 	irq_gpio = gpio_get_value(gf_dev->irq_gpio);
-	dev_info(dev, "IRQ after reset %d\n", irq_gpio);
 exit:
 	return rc;
 }

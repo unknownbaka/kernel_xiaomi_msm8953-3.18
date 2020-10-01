@@ -318,8 +318,6 @@ static long gf_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 		} else {
 			pr_warn("Failed to get speed from user. retval = %d\n",	retval);
 		}
-#else
-		pr_info("This kernel doesn't support control clk in AP\n");
 #endif
 		break;
 	case GF_IOC_RESET:
@@ -341,7 +339,6 @@ static long gf_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 		for (i = 0; i < ARRAY_SIZE(key_map); i++) {
 			if (key_map[i].val == gf_key.key) {
 				if (KEY_CAMERA == gf_key.key) {
-					printk("lihao send camera key!\n");
 					input_report_key(gf_dev->input, KEY_SELECT, gf_key.value);
 					input_sync(gf_dev->input);
 				} else {
@@ -361,15 +358,11 @@ static long gf_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 	case GF_IOC_CLK_READY:
 #ifdef AP_CONTROL_CLK
 		gfspi_ioctl_clk_enable(gf_dev);
-#else
-		pr_info("Doesn't support control clock.\n");
 #endif
 		break;
 	case GF_IOC_CLK_UNREADY:
 #ifdef AP_CONTROL_CLK
 		gfspi_ioctl_clk_disable(gf_dev);
-#else
-		pr_info("Doesn't support control clock.\n");
 #endif
 		break;
 	case GF_IOC_PM_FBCABCK:
