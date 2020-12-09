@@ -6,7 +6,7 @@
 #
 # General setup
 #
-CONFIG_LOCALVERSION="-PureCAFx-LA.UM.8.6.r1-04700-89xx.0"
+CONFIG_LOCALVERSION="-PureCAFx-LA.UM.8.6.c26-01600-89xx.0"
 # CONFIG_LOCALVERSION_AUTO is not set
 # CONFIG_USELIB is not set
 # CONFIG_AUDIT is not set
